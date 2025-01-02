@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="library">
+        <div class="header">
+          <img src="img/saitama.png" alt="saitama" id="saitama" />
+          <p id="new-book">Add New Book</p>
+        </div>
+        <div id="first-block" class="content">
+          <table id="book-list">
+            <tr>
+              <th>Title</th>
+              <th>Author</th>
+              <th>Pages</th>
+              <th>Read Status</th>
+            </tr>
+          </table>
+        </div>
+        <div id="second-block" class="content" style="display: none">
+          <form id="book-form">
+            <label for="title">Title:</label><br />
+            <input type="text" id="title" name="title" required /><br /><br />
+
+            <label for="author">Author:</label><br />
+            <input type="text" id="author" name="author" required /><br /><br />
+
+            <label for="pages">Pages:</label><br />
+            <input
+              type="number"
+              min="1"
+              id="pages"
+              name="pages"
+              required
+            /><br /><br />
+
+            <label for="readstatus">Read Status:</label><br />
+            <select id="readstatus" name="readstatus" required>
+              <option value="Completed">Completed</option>
+              <option value="In Progress">In Progress</option></select
+            ><br /><br />
+
+            <button type="submit" id="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
