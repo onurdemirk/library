@@ -48,8 +48,8 @@ bookForm.addEventListener("submit", (event) => {
     bookPages.value,
     bookStatus.value
   );
-  
-  addBookToLibrary(newBook); 
+
+  addBookToLibrary(newBook);
 
   bookTitle.value = "";
   bookAuthor.value = "";
@@ -60,12 +60,11 @@ bookForm.addEventListener("submit", (event) => {
   bookListContainer.style.display = "block";
 
   newBookButton.innerText = "Add New Book";
-
 });
 
 function addBookToLibrary(book) {
   myLibrary.push(book);
-  displayBooks()
+  displayBooks();
 }
 
 function displayBooks() {
