@@ -1,8 +1,13 @@
-function Book(title, author, pages, read) {
-  this.title = title;
-  this.pages = pages;
-  this.author = author;
-  this.readStatus = read;
+class Book {
+  
+  constructor(title, author, pages, read) {
+    
+    this.title = title;
+    this.pages = pages;
+    this.author = author;
+    this.readStatus = read;
+  }
+ 
 }
 
 const myLibrary = [
