@@ -108,4 +108,35 @@ document.addEventListener("click", (e) => {
   }
 });
 
+bookTitle.addEventListener("invalid", (event) => {
+  event.preventDefault();
+   if(bookTitle.validity.valueMissing) {
+    bookTitle.setCustomValidity("Required field cannot be empty!");
+  } else {
+    bookTitle.setCustomValidity("");
+  }
+  bookTitle.reportValidity();
+});
+
+bookAuthor.addEventListener("invalid", (event) => {
+  event.preventDefault();
+   if(bookAuthor.validity.valueMissing) {
+    bookAuthor.setCustomValidity("Required field cannot be empty!");
+  } else {
+    bookAuthor.setCustomValidity("");
+  }
+  bookAuthor.reportValidity();
+});
+
+bookPages.addEventListener("input", () => {
+  bookPages.reportValidity();
+   if(bookPages.validity.rangeUnderflow) {
+    bookPages.setCustomValidity("Value must be at least " + bookPages.min);
+  } else {
+    bookPages.setCustomValidity("");
+  }
+ 
+});
+
+
 displayBooks();
